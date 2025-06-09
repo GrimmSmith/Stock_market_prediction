@@ -27,9 +27,10 @@ tech_list = ['AAPL', 'GOOG', 'MSFT', 'AMZN']
 end = datetime.now()
 start = datetime(end.year - 1, end.month, end.day)
 
-for stock in tech_list:
-    globals()[stock] = yf.download(stock, start, end)
-    
+AAPL = yf.download('AAPL', start, end)
+GOOG = yf.download('GOOG', start, end)
+MSFT = yf.download('MSFT', start, end)
+AMZN = yf.download('AMZN', start, end)
 
 company_list = [AAPL, GOOG, MSFT, AMZN]
 company_name = ["APPLE", "GOOGLE", "MICROSOFT", "AMAZON"]
